@@ -23,7 +23,7 @@ public class carSpawner : MonoBehaviour
     {
 
         timer = delayTimer;
-        
+
     }
 
     // Update is called once per frame
@@ -35,21 +35,21 @@ public class carSpawner : MonoBehaviour
         if (timer <= 0)
         {
 
-        //random car position, min and max position
-        Vector3 carPosition = new Vector3(Random.Range(-2.2f, 2.2f), 
-                transform.position.y, transform.position.z);
+            //random car position, min and max position
+            Vector3 carPosition = new Vector3(Random.Range(-2.2f, 2.2f),
+                    transform.position.y, transform.position.z);
 
-        //random cars
-        carID = Random.Range(0,3);
+            //random cars
+            carID = Random.Range(0, 3);
 
-        //Instantiate(car, transform.position, transform.rotation);
-        //instantiate cars by id, car 1, car 2 ...
-        Instantiate(cars[carID], carPosition, transform.rotation);
-        
+            //Instantiate(car, transform.position, transform.rotation);
+            //instantiate cars by id, car 1, car 2 ...
+            Instantiate(cars[carID], carPosition, transform.rotation);
 
 
-        timer = delayTimer;
 
-        }    
+            timer = delayTimer;
+
+        }
     }
 }
